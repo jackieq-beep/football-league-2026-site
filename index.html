@@ -8,17 +8,43 @@
   <meta name="description" content="Play the League. Rule the Pitch">
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <div class="logo-badge">FL</div>
-        <span>Football League 2026</span>
-      </a>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a><a href="features.html" class="">Features</a><a href="modes.html" class="">Game Modes</a><a href="gallery.html" class="">Gallery</a><a href="download.html" class="">Download</a><a href="contact.html" class="">Contact</a>
-      </nav>
+  <header class="site-header">
+  <div class="nav-wrapper">
+    <div class="nav-left">
+      <div class="logo-badge">FL</div>
+      <div class="logo-title">Football League 2026</div>
     </div>
-  </header>
+
+    <!-- Desktop Menu -->
+    <nav class="nav-links-desktop">
+      <a href="features.html">Features</a>
+      <a href="community.html">Community</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="hamburger" onclick="toggleMenu()">
+      ☰
+    </button>
+  </div>
+
+  <!-- Slide-in Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="features.html">Features</a>
+    <a href="community.html">Community</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+}
+</script>
+
   <main class="main">
   
 <section class="hero">
