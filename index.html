@@ -6,9 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <meta name="description" content="Play the League. Rule the Pitch">
+
+  <style>
+    /* Stronger hover effects */
+    .nav-links-desktop a:hover {
+      color: #00ffc8;
+      text-shadow: 0 0 10px #00ffc8;
+      transform: scale(1.07);
+    }
+
+    .btn-primary:hover,
+    .btn-ghost:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.65);
+      filter: brightness(1.2);
+    }
+
+    .feature-card:hover,
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(0, 255, 200, 0.27);
+      border-color: #00ffc8;
+    }
+
+    .real-hero-image img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 0 40px rgba(0, 255, 200, 0.25);
+      border: 3px solid rgba(0, 255, 200, 0.35);
+    }
+
+    /* Simple reset for hero removal */
+    .hero-card { border: none; background: none; box-shadow: none; padding: 0; }
+  </style>
 </head>
+
 <body>
-  <header class="site-header">
+<header class="site-header">
   <div class="nav-wrapper">
     <div class="nav-left">
       <div class="logo-badge">FL</div>
@@ -17,21 +51,21 @@
 
     <!-- Desktop Menu -->
     <nav class="nav-links-desktop">
-      <a href="features.html">Features</a>
+      <a href="index.html">Home</a>
+      <a href="gameplay.html">Gameplay</a>
       <a href="community.html">Community</a>
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
     </nav>
 
     <!-- Mobile Menu Button -->
-    <button class="hamburger" onclick="toggleMenu()">
-      ☰
-    </button>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
   </div>
 
   <!-- Slide-in Mobile Menu -->
   <div id="mobileMenu" class="mobile-menu">
-    <a href="features.html">Features</a>
+    <a href="index.html">Home</a>
+    <a href="gameplay.html">Gameplay</a>
     <a href="community.html">Community</a>
     <a href="news.html">News</a>
     <a href="contact.html">Contact</a>
@@ -45,68 +79,61 @@ function toggleMenu() {
 }
 </script>
 
-  <main class="main">
-  
+<main class="main">
+
+<!-- HERO SECTION -->
 <section class="hero">
   <div>
     <div class="hero-kicker">Mobile Football • Free to Play</div>
     <h1 class="hero-title">Own the pitch in <span>Football League 2026</span></h1>
+
     <p class="hero-tagline">
-      Football League 2025 delivers lifelike action, smarter AI, and vibrant stadium atmospheres. 
+      Football League 2026 delivers lifelike action, smarter AI, and vibrant stadium atmospheres. 
       Enjoy full 3D gameplay, improved UI, and multi-language commentary. Build your dream team from 40,000+ players and compete worldwide.
     </p>
+
     <div class="hero-meta">
-      <span>Android • Mobile</span>
-      <span>Career • Challenges • Draft</span>
-      <span>Single-Player Focus</span>
+      <span>Group Stage • Qualifiers</span>
+      <span>Free Kick • Penalty • Draft</span>
+      <span>League • Cup • Player</span>
     </div>
+
     <div class="hero-actions">
-      <a class="btn btn-primary" href="download.html">
-        <span class="icon">▶</span>
-        <span>Download on Google Play</span>
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.football.soccer.league&hl=en" target="_blank">
+        ▶ Google Play
       </a>
+
+      <a class="btn btn-primary ios-btn" href="https://apps.apple.com/us/app/football-league-2025/id6447961802" target="_blank">
+         App Store
+      </a>
+
       <a class="btn btn-ghost" href="#why-fl2026">
         Watch gameplay trailer
       </a>
     </div>
+
     <p class="hero-footnote">
       Replace these buttons with your actual Google Play and YouTube links after uploading the site.
     </p>
   </div>
+
+  <!-- HERO IMAGE BLOCK (Updated) -->
   <div class="hero-art">
-    <div class="hero-card">
-      <div class="hero-card-header">
-        <div class="hero-card-title">Match Preview • Placeholder</div>
-        <div class="badge-live">In-Game Screenshot</div>
-      </div>
-      <div class="pitch-placeholder">
-        Drop your main gameplay screenshot here<br>
-        <span>(Google Sites → Replace this block with an image)</span>
-      </div>
-      <div class="hero-card-footer">
-        <div class="hero-card-footer-block">
-          <span class="hero-card-footer-label">Mode</span>
-          <span class="hero-card-footer-value">Career Match</span>
-        </div>
-        <div class="hero-card-footer-block">
-          <span class="hero-card-footer-label">Difficulty</span>
-          <span class="hero-card-footer-value">World Class</span>
-        </div>
-        <div class="hero-card-footer-block">
-          <span class="hero-card-footer-label">Kick-off</span>
-          <span class="hero-card-footer-value">90' • Extra Time</span>
-        </div>
-      </div>
+    <div class="hero-card real-hero-image">
+      <img src="assets/images/freekick.jpg" alt="Football League 2026 — Free Kick Screenshot">
     </div>
   </div>
 </section>
 
+
+<!-- WHY FL2026 -->
 <section class="section" id="why-fl2026">
   <h2 class="section-heading">Why players love Football League 2026</h2>
   <p class="section-subtitle">
     Built for real football fans who want tight controls, fast animations, and rewarding progression —
     without losing that authentic stadium feel.
   </p>
+
   <div class="features-grid">
     <article class="feature-card">
       <div class="feature-icon">⚽</div>
@@ -115,6 +142,7 @@ function toggleMenu() {
         Short, intense matches that fit your day — from quick breaks to late-night marathons.
       </p>
     </article>
+
     <article class="feature-card">
       <div class="feature-icon">🎮</div>
       <h3 class="feature-title">Skill-based controls</h3>
@@ -122,6 +150,7 @@ function toggleMenu() {
         Dribble, pass, and shoot with responsive touch controls that reward timing and precision.
       </p>
     </article>
+
     <article class="feature-card">
       <div class="feature-icon">🌍</div>
       <h3 class="feature-title">Global football vibe</h3>
@@ -132,11 +161,14 @@ function toggleMenu() {
   </div>
 </section>
 
+
+<!-- BUILT FOR 2026 -->
 <section class="section">
   <h2 class="section-heading">Built for 2026 and beyond</h2>
   <p class="section-subtitle">
     Football League 2026 pushes mobile hardware with sharper visuals, smoother animations, and smarter opponents.
   </p>
+
   <div class="two-col">
     <div class="card">
       <h3 class="card-title">Smarter match engine</h3>
@@ -145,6 +177,7 @@ function toggleMenu() {
         runs and cut inside like real pros.
       </p>
     </div>
+
     <div class="card">
       <h3 class="card-title">Optimized for quick sessions</h3>
       <p class="card-text">
@@ -154,15 +187,17 @@ function toggleMenu() {
   </div>
 </section>
 
-  </main>
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>© 2025 Football League 2026. All rights reserved.</span>
-      <div class="footer-links">
-        <a href="contact.html">Contact</a>
-        <a href="download.html">Download</a>
-      </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© Football League 2026. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="contact.html">Contact</a>
+      <a href="download.html">Download</a>
     </div>
-  </footer>
+  </div>
+</footer>
+
 </body>
 </html>
